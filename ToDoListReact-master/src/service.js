@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const apiUrl = "http://localhost:5070"; 
+// שימוש במשתנה סביבה לפי התחילה הנדרשת ב-Create React App
+const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5070"; 
 axios.defaults.baseURL = apiUrl;
-
 export default {
   getTasks: async () => {
     const result = await axios.get(`/items`)    
