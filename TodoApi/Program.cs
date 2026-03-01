@@ -41,7 +41,7 @@ app.UseCors("AllowAll");
 // -----------------------------------------------------------------------
 
 // --- 3. הגדרת נתיבי ה-API (Endpoints) ---
-
+app.MapGet("/", () => "ברוכים הבאים ל-API של ToDo!"); // נתיב בסיסי לבדיקה
 // שליפת כל המשימות - הכתובת: GET /items
 app.MapGet("/items", async (ToDoDbContexttt db) =>
     await db.Items.ToListAsync());
